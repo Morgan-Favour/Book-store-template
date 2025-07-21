@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bs-white: #FFFFFF;
+            --color-bs-black: #0c0c0c;
+            --color-bs-primary: #758BFD;
+            --color-bs-gray: #898989;
+            --color-bs-bg: #F8F8FA;
+            --font-poppins: "Poppins", sans-serif;
+         }
+    </style>
 </head>
+
 <body>
-    
+    <nav>
+        <div
+            class="w-full md:w-[70%] flex justify-around items-center align-center mx-auto my-10 py-4 md:py-6 bg-bs-white shadow-md rounded-full">
+            <div>
+                <img src="./assets/logo.png" alt="" class="w-20 md:w-30 h-auto">
+            </div>
+            <div>
+                <button id="menu-toggle" class="md:hidden text-2xl text-color-gr-black focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul id="menu"
+                    class="fixed px-4 inset-y-0 right-0 w-64 bg-bs-primary md:bg-bs-white shadow-md transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out md:static md:flex md:flex-row space-x-6 md:space-x-10 md:w-auto md:shadow-none z-20">
+                    <li class="md:hidden flex justify-end pt-4">
+                        <button id="menu-close" class="text-2xl text-bs-white focus:outline-none"
+                            aria-label="Close Menu"><i class="fa-solid fa-close"></i>
+                        </button>
+                    </li>
+                    <a href="">
+                        <li class="font-semibold font-poppins text-lg text-bs-white hover:text-bs-primary md:text-bs-black transition-colors duration-300">Categories</li>
+                    </a>
+                    <a href="">
+                        <li class="font-semibold font-poppins text-lg text-bs-white hover:text-bs-primary md:text-bs-black transition-colors duration-300">Best seller</li>
+                    </a>
+                    <a href="">
+                        <li class="font-semibold font-poppins text-lg text-bs-white hover:text-bs-primary md:text-bs-black transition-colors duration-300">Testimonial</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <script src="./main.js"></script>
 </body>
+
 </html>
